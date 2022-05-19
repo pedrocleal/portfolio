@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
 export const Container = styled.header`
-  position: fixed;
+  position: static;
   width: 100%;
   border-bottom: 1px solid #606060;
+  /* Fix header box shadow */
 `;
 
 export const HeaderContainer = styled.header`
@@ -29,6 +30,7 @@ export const HeaderContainer = styled.header`
       color: ${({ theme }) => (theme === 'dark' ? '#fff' : '#000')};
       border: none;
       outline: none;
+      transition: all 0.3s ease-in;
     }
   }
 `;

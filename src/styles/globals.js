@@ -12,9 +12,18 @@ export default createGlobalStyle`
     background: ${({ theme }) => (theme === 'dark' ? '#1b1b1b' : '#fafafa')};
     margin-top: -1px;
     scroll-behavior: smooth;
+    transition: all 0.3s ease-in;
   }
 
   button {
     cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p, span, strong {
+    color: ${({ theme }) => (theme === 'dark' ? '#fff' : '#000')};
   }
 `;

@@ -1,6 +1,6 @@
 import { createContext, useMemo, useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { Header } from './components/Header';
+import { Home } from './pages/Home';
 import GlobalStyles from './styles/globals';
 
 export const ThemeContext = createContext('dark');
@@ -20,7 +20,7 @@ function App() {
     <BrowserRouter>
       <ThemeContext.Provider value={memoContextValues}>
         <GlobalStyles theme={theme} />
-        <Header />
+        <Home />
       </ThemeContext.Provider>
     </BrowserRouter>
   );
