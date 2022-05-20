@@ -13,6 +13,7 @@ export default createGlobalStyle`
     margin-top: -1px;
     scroll-behavior: smooth;
     transition: all 0.3s ease-in;
+    height: 100%;
   }
 
   button {

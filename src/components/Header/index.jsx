@@ -13,7 +13,7 @@ export function Header() {
   const { theme, onToggleTheme } = useContext(ThemeContext);
 
   return (
-    <Container>
+    <Container theme={theme}>
       <HeaderContainer theme={theme}>
         <div className="logo-container">
           <img src={memoji} alt="Memoji Pedro" />

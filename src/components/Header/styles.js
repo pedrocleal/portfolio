@@ -1,9 +1,13 @@
 import styled from 'styled-components';
 
 export const Container = styled.header`
-  position: static;
+  position: fixed;
   width: 100%;
-  border-bottom: 1px solid #606060;
+  border-bottom: 1px solid #2E2E2E;
+  z-index: 1;
+  transition: all 0.3s ease-in;
+  /* background: ${({ theme }) => (theme === 'dark' ? '#000' : '#fff')}; */
+  backdrop-filter: blur(24px);
   /* Fix header box shadow */
 `;
 
@@ -44,6 +48,6 @@ export const Nav = styled.nav`
     margin-right: 32px;
     text-decoration: none;
     color: ${({ theme }) => (theme === 'dark' ? '#fff' : '#000')};
-    font-weight: 500;
+    font-weight: 600;
   }
 `;
