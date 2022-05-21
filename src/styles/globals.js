@@ -14,6 +14,7 @@ export default createGlobalStyle`
     scroll-behavior: smooth;
     transition: all 0.3s ease-in;
     height: 100%;
+    font-size: 16px;
   }
 
   button {

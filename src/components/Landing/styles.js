@@ -77,6 +77,7 @@ export const ProfilePictute = styled.div`
   position: sticky;
   position: -webkit-sticky;
   top: 15rem;
+  padding-bottom: 15rem;
 
   img {
     width: 350px;
