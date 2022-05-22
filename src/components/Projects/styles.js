@@ -3,7 +3,7 @@ import styled, { keyframes } from 'styled-components'
 export const Container = styled.section`
   width: 100%;
   max-width: 1080px;
-  margin: 0px auto;
+  margin: 52px auto;
   display: flex;
   align-items: center;
   justify-content: center;
