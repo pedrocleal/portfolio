@@ -15,6 +15,7 @@ export default createGlobalStyle`
     height: 100%;
     font-size: 16px;
     scroll-behavior: smooth !important;
+    overflow-x: hidden;
   }
 
   button {

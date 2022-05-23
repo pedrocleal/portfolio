@@ -23,6 +23,6 @@
         "import/prefer-default-export": 0,
         "react/prop-types": 0,
         "import/no-cycle": 0,
-        "max-len": 0,
+        "max-len": 0
     }
 }

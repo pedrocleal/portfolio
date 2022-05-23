@@ -1,4 +1,16 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const animateText = keyframes`
+  to {
+    left: 100%;
+  }
+`;
+
+const blink = keyframes`
+  to {
+    background: transparent;
+  }
+`;
 
 export const Container = styled.section`
   width: 100%;
@@ -30,6 +42,34 @@ export const LandingContainer = styled.div`
         font-size: 52px;
       }
       
+      .animated-text {
+        font-family: 'JetBrains Mono', monospace;
+        font-weight: 400;
+        position: relative;
+        width: max-content;
+        
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+        }
+
+        &::after {
+          width: 6px;
+          background: #8A53FF;
+          animation: ${animateText} 3s steps(24) 1s forwards, ${blink} 0.75s steps(24) infinite;
+        }
+
+        &::before {
+          background: ${({ theme }) => (theme === 'dark' ? '#1b1b1b' : '#fafafa')};
+          animation: ${animateText} 3s steps(24) 1s forwards;
+        }
+      }
+
       h4 {
         font-size: 28px;
         font-weight: 500;
@@ -47,11 +87,14 @@ export const LandingContainer = styled.div`
 
       .buttons {
         margin-top: 24px;
-        button {
+
+        a {
+          display: inline-block;
+          text-align: center;
           padding: 8px 16px;
-          width: 150px;
+          text-decoration: none;
+          width: 100px;
           color: #fff;
-          /* border: 1px solid ${({ theme }) => (theme === 'dark' ? '#fff' : '#000')}; */
           border: none;
           border-radius: 5px;
           font-size: 16px;
@@ -84,7 +127,7 @@ export const ProfilePictute = styled.div`
     width: 350px;
     height: 350px;
     transition: all 0.3s ease-out 0s;
-    box-shadow: 0px 0px 2.5rem ${({ theme }) => theme === 'dark' ? '#5200FF61' : '#00000029'};
+    box-shadow: 0px 0px 2.5rem ${({ theme }) => (theme === 'dark' ? '#5200FF61' : '#00000029')};
     border-radius: 80%;
 
     &:hover {

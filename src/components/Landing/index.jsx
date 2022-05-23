@@ -12,7 +12,7 @@ export function Landing({ elementRef }) {
   return (
     <Container theme={theme} ref={elementRef}>
       <LandingContainer theme={theme}>
-        <div className='left-content'>
+        <div className="left-content">
           <div className="greetings">
             <h4>
               Olá
@@ -21,10 +21,10 @@ export function Landing({ elementRef }) {
               , eu sou
             </h4>
             <h1>Pedro Leal</h1>
-            <h4>Desenvolvedor front-end</h4>
+            <h4 className="animated-text">Desenvolvedor front-end.</h4>
             <div className="buttons">
-              <button type="button">LinkedIn</button>
-              <button type="button">Github</button>
+              <a href="https://www.linkedin.com/in/pedrocleal/" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a href="https://www.github.com/pedrocleal" target="_blank" rel="noreferrer">Github</a>
             </div>
           </div>
           <About />
