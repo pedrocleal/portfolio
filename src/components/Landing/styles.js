@@ -50,21 +50,22 @@ export const LandingContainer = styled.div`
         button {
           padding: 8px 16px;
           width: 150px;
-          color: ${({ theme }) => (theme === 'dark' ? '#fff' : '#000')};
-          border: 1px solid ${({ theme }) => (theme === 'dark' ? '#fff' : '#000')};
+          color: #fff;
+          /* border: 1px solid ${({ theme }) => (theme === 'dark' ? '#fff' : '#000')}; */
+          border: none;
           border-radius: 5px;
           font-size: 16px;
           font-weight: 500;
-          background: transparent;
-          transition: all 0.3s ease-in;
+          background: #8A53FF;
+          transition: all 0.3s ease-out;
 
           &:hover {
-            background: ${({ theme }) => (theme === 'dark' ? '#fff' : '#000')};
-            color: ${({ theme }) => (theme === 'dark' ? '#000' : '#fff')};
+            transform: scale(1.1);
+            background: #6124EF;
           }
           
           &:nth-child(2) {
-            margin-left: 12px;
+            margin-left: 16px;
           }
         }
       }
@@ -83,7 +84,7 @@ export const ProfilePictute = styled.div`
     width: 350px;
     height: 350px;
     transition: all 0.3s ease-out 0s;
-    box-shadow: rgb(0 0 0 / 16%) 0px 0px 2.5rem;
+    box-shadow: 0px 0px 2.5rem ${({ theme }) => theme === 'dark' ? '#5200FF61' : '#00000029'};
     border-radius: 80%;
 
     &:hover {

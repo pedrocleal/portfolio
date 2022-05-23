@@ -44,7 +44,8 @@ export const Nav = styled.nav`
   align-items: center;
   justify-content: space-between;
 
-  a {
+  p {
+    cursor: pointer;
     margin-right: 32px;
     text-decoration: none;
     color: ${({ theme }) => (theme === 'dark' ? '#fff' : '#000')};

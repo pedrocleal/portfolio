@@ -24,10 +24,15 @@ export const Container = styled.section`
     font-size: 16px;
 
     color: #fff;
-    background: #5200FF9E;
+    background: #8A53FF;
     border: none;
     border-radius: 5px;
     outline: none;
+    transition: all 0.3s ease-out;
+
+    &:hover {
+      transform: scale(1.1)
+    }
   }
 `
 
@@ -35,7 +40,7 @@ export const ListProjects = styled.div`
   display: flex;
   justify-content: flex-start; 
   flex-direction: column;
-  margin-bottom: 52px;
+  margin-bottom: 32px;
 
   .project {
     margin: 32px 0;
@@ -56,11 +61,11 @@ export const ListProjects = styled.div`
       height: 120px;
       margin-bottom: 16px;
       border-radius: 5px;
-      box-shadow:  1px 1px 32px 1px ${({ theme }) => theme === 'dark' ? '#5200FF61' : '#00000029'};
+      box-shadow:  1px 1px 32px 1px ${({ theme }) => theme === 'dark' ? '#8A53FF61' : '#00000029'};
       transition: all 0.3s ease-out;
 
       &:hover {
-        box-shadow:  1px 1px 32px 1px ${({ theme }) => theme === 'dark' ? '#5200FF' : '#0000006b'};
+        box-shadow:  1px 1px 32px 1px ${({ theme }) => theme === 'dark' ? '#8A53FF' : '#0000006b'};
         transform: translate3d(0px, -0.125rem, 0px);
       }
     }
@@ -79,7 +84,7 @@ export const ListProjects = styled.div`
         margin-top: 12px;
         text-decoration: none;
         font-weight: bold;
-        color: #5200FF;
+        color: #8A53FF;
       }
     }
   }

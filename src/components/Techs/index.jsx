@@ -35,9 +35,9 @@ const techs = [
   },
 ]
 
-export function Techs() {
+export function Techs({ elementRef }) {
   return (
-    <Container>
+    <Container ref={elementRef}>
       <h1>Conhecimentos</h1>
       <p>Tecnologias que estou diariamente em contato, seja no trabalho ou estudando.</p>
       <ListTechs>
@@ -50,7 +50,6 @@ export function Techs() {
           </Tech>
         ))}
       </ListTechs>
-
     </Container>
   )
 }

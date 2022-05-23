@@ -6,11 +6,11 @@ import profilePicture from '../../assets/profile-picture.png';
 
 import { About } from '../About';
 
-export function Landing() {
+export function Landing({ elementRef }) {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <Container theme={theme}>
+    <Container theme={theme} ref={elementRef}>
       <LandingContainer theme={theme}>
         <div className='left-content'>
           <div className="greetings">

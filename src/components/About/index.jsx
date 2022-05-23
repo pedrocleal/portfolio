@@ -2,7 +2,7 @@ import { Container } from "./styles";
 
 export function About() {
   return (
-    <Container>
+    <Container id="about">
       <h1>Sobre mim</h1>
       <p>
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. 

@@ -27,16 +27,16 @@ const projects = [
   }
 ]
 
-export function Projects() {
+export function Projects({ elementRef }) {
 
   const { theme } = useContext(ThemeContext);
 
   return ( 
-    <Container theme={theme}>
+    <Container theme={theme} ref={elementRef}>
       <h1>Projetos</h1>
       <ListProjects theme={theme}>
-        {projects.map(({ title, desc, screenshot, url }) => (
-          <div className="project">
+        {projects.map(({ title, desc, screenshot, url }, index) => (
+          <div className="project" key={index}>
             <img src={screenshot} alt={`Print da tela do projeto ${title}`} />
             <div className="project-info">
               <span>{title}</span>

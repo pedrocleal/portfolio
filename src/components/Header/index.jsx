@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 import { Moon, Sun } from 'phosphor-react';
 
 import { useContext } from 'react';
@@ -9,12 +7,18 @@ import { ThemeContext } from '../../App';
 
 import memoji from '../../assets/memoji.png';
 
-export function Header() {
+export function Header({ refs }) {
   const { theme, onToggleTheme } = useContext(ThemeContext);
+
+  console.log(refs);
+  
+  function handleScrollTo(ref) {
+    ref.current.scrollIntoView({ behavior: 'smooth', block: 'center'});
+  }
 
   return (
     <Container theme={theme}>
-      <HeaderContainer theme={theme}>
+      <HeaderContainer theme={theme}> 
         <div className="logo-container">
           <img src={memoji} alt="Memoji Pedro" />
           <button type="button" onClick={onToggleTheme}>
@@ -22,10 +26,10 @@ export function Header() {
           </button>
         </div>
         <Nav theme={theme}>
-          <Link to="/">Sobre</Link>
-          <Link to="/">Projetos</Link>
-          <Link to="/">Conhecimentos</Link>
-          <Link to="/">Contato</Link>
+          <p onClick={() => handleScrollTo(refs.aboutRef)}>Sobre</p>
+          <p onClick={() => handleScrollTo(refs.projectsRef)}>Projetos</p>
+          <p onClick={() => handleScrollTo(refs.techsRef)}>Conhecimentos</p>
+          <p onClick={() => handleScrollTo(refs.contactsRef)}>Contato</p>
         </Nav>
       </HeaderContainer>
     </Container>

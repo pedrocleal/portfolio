@@ -11,10 +11,10 @@ export default createGlobalStyle`
   body {
     background: ${({ theme }) => (theme === 'dark' ? '#1b1b1b' : '#fafafa')};
     margin-top: -1px;
-    scroll-behavior: smooth;
     transition: all 0.3s ease-in;
     height: 100%;
     font-size: 16px;
+    scroll-behavior: smooth !important;
   }
 
   button {
