@@ -6,9 +6,12 @@ export const Container = styled.header`
   border-bottom: 1px solid #2E2E2E;
   z-index: 1;
   transition: all 0.3s ease-in;
-  /* background: ${({ theme }) => (theme === 'dark' ? '#000' : '#fff')}; */
-  backdrop-filter: blur(24px);
   /* Fix header box shadow */
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(16.4px);
+  -webkit-backdrop-filter: blur(16.4px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 `;
 
 export const HeaderContainer = styled.header`
