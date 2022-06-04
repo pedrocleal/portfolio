@@ -14,7 +14,7 @@ const blink = keyframes`
 
 export const Container = styled.section`
   width: 100%;
-  max-width: 1080px;
+  max-width: 1200px;
   margin: auto;
   display: flex;
   flex-direction: column;

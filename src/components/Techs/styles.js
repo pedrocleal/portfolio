@@ -1,8 +1,8 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Container = styled.section`
   width: 100%;
-  max-width: 1080px;
+  max-width: 1280px;
   margin: 152px auto;
   padding: 140px 0;
 
@@ -20,7 +20,15 @@ export const Container = styled.section`
     margin-top: 16px;
     color: #8A53FF;
   }
-`
+
+  @media (max-width: 1500px) {
+    max-width: 1080px;
+  }
+
+  @media (max-width: 1080px) {
+    max-width: 860px;
+  }
+`;
 
 export const ListTechs = styled.div`
   display: grid;
@@ -30,7 +38,7 @@ export const ListTechs = styled.div`
   margin-left: 72px;
   
   width: 100%;
-`
+`;
 
 export const Tech = styled.div`
   display: flex;
@@ -56,4 +64,4 @@ export const Tech = styled.div`
       height: 50px;
     }
   }
-`
+`;

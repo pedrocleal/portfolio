@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Container = styled.section`
   width: 100vw;
@@ -70,4 +70,4 @@ export const Container = styled.section`
       }
     }
   }
-`
+`;

@@ -1,8 +1,8 @@
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components';
 
 export const Container = styled.section`
   width: 100%;
-  max-width: 1080px;
+  max-width: 1280px;
   margin: 52px auto;
   display: flex;
   align-items: center;
@@ -34,7 +34,15 @@ export const Container = styled.section`
       transform: scale(1.1)
     }
   }
-`
+
+  @media (max-width: 1500px) {
+    max-width: 1080px;
+  }
+
+  @media (max-width: 1080px) {
+    max-width: 860px;
+  }
+`;
 
 export const ListProjects = styled.div`
   display: flex;
@@ -61,11 +69,11 @@ export const ListProjects = styled.div`
       height: 120px;
       margin-bottom: 16px;
       border-radius: 5px;
-      box-shadow:  1px 1px 32px 1px ${({ theme }) => theme === 'dark' ? '#8A53FF61' : '#00000029'};
+      box-shadow:  1px 1px 32px 1px ${({ theme }) => (theme === 'dark' ? '#8A53FF61' : '#00000029')};
       transition: all 0.3s ease-out;
 
       &:hover {
-        box-shadow:  1px 1px 32px 1px ${({ theme }) => theme === 'dark' ? '#8A53FF' : '#0000006b'};
+        box-shadow:  1px 1px 32px 1px ${({ theme }) => (theme === 'dark' ? '#8A53FF' : '#0000006b')};
         transform: translate3d(0px, -0.125rem, 0px);
       }
     }
@@ -88,4 +96,4 @@ export const ListProjects = styled.div`
       }
     }
   }
-`
+`;

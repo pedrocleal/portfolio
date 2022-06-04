@@ -16,7 +16,7 @@ export const Container = styled.header`
 
 export const HeaderContainer = styled.header`
   width: 100%;
-  max-width: 1080px;
+  max-width: 1280px;
   margin: 0 auto;
 
   display: flex;
@@ -39,6 +39,18 @@ export const HeaderContainer = styled.header`
       outline: none;
       transition: all 0.3s ease-in;
     }
+  }
+
+  @media (max-width: 1500px) {
+    max-width: 1080px;
+  }
+
+  @media (max-width: 1080px) {
+    max-width: 860px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 12px;
   }
 `;
 

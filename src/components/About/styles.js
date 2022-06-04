@@ -1,8 +1,8 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Container = styled.section`
   width: 100%;
-  max-width: 1080px;
+  max-width: 1200px;
   margin: auto;
   height: 70vh;
 
@@ -14,4 +14,4 @@ export const Container = styled.section`
     margin-top: 24px;
     width: 80%;
   }
-`
+`;
