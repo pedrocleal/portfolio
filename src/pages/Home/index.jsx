@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { Header } from '../../components/Header';
 import { Landing } from '../../components/Landing';
+import { About } from '../../components/About';
 import { Projects } from '../../components/Projects';
 import { Techs } from '../../components/Techs';
 import { Contact } from '../../components/Contact';
@@ -19,7 +20,8 @@ export function Home() {
   return (
     <>
       <Header refs={refs} />
-      <Landing elementRef={aboutRef} />
+      <Landing />
+      <About elementRef={aboutRef} />
       <Projects elementRef={projectsRef} />
       <Techs elementRef={techsRef} />
       <Contact elementRef={contactsRef} />
