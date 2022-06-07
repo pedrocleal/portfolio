@@ -59,6 +59,11 @@ export const Tech = styled.div`
     justify-content: center;
     background: #8A53FF;
     border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.08);
+    }
 
     img {
       height: 50px;
