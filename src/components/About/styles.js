@@ -2,13 +2,6 @@ import styled from 'styled-components';
 
 export const Container = styled.section`
   width: 100%;
-  /* background: url(${({ theme }) => (theme === 'dark' ? '/src/assets/code-dark.png' : '/src/assets/code-white.png')}) center center no-repeat;
-  background-size: 100% auto; */
-  transition: all 0.3s ease-in;
-`;
-
-export const Box = styled.div`
-  width: 100%;
   max-width: 1280px;
   margin: 0 auto;
   height: 80vh;
@@ -17,21 +10,59 @@ export const Box = styled.div`
   align-items: center;
   justify-content: space-between;
   
-  h1 {
-    font-size: 32px;
+  .about-texts {
+    h1 {
+      font-size: 32px;
+    }
+  
+    p {
+      margin-top: 24px;
+      width: 80%;
+    }
   }
-
-  p {
-    margin-top: 24px;
-    width: 80%;
-  }
-
+  
   img {
     height: 300px;
     transition: all 0.3s ease-in-out;
 
     &:hover {
       transform: scale(1.04)
+    }
+
+    @media (max-width: 860px) {
+      height: 300px;
+    }
+    
+    @media (max-width: 520px) {
+      height: 200px;
+    }
+  }
+
+  @media (max-width: 1500px) {
+    max-width: 1080px;
+  }
+
+  @media (max-width: 1080px) {
+    max-width: 860px;
+  }
+
+  @media (max-width: 860px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 52px 24px;
+    height: auto;
+
+    .about-texts {
+      h1 {
+        text-align: center;
+      }
+      
+      p {
+        width: 100%;
+        text-align: justify;
+        margin-bottom: 24px;
+      }
     }
   }
 `;

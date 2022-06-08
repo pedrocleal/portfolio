@@ -10,7 +10,7 @@ export const Container = styled.section`
   align-items: center;
   flex-direction: column;
 
-  .texts {
+  .head {
     margin-top: 92px;
     text-align: center;
     
@@ -33,8 +33,9 @@ export const Container = styled.section`
     margin-top: 24px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    width: 500px;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 500px;
     
     .linkedin {
       background: #0073B0;
@@ -50,10 +51,12 @@ export const Container = styled.section`
 
     a {
       text-decoration: none;
+      width: 200px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       padding: 8px 16px;  
+      margin: 12px 24px;
       border: none;
       border-radius: 4px;
       font-size: 16px;
@@ -68,6 +71,10 @@ export const Container = styled.section`
         margin-left: 8px;
         color: #fff;
       }
+    }
+
+    @media (max-width: 860px) {
+      flex-direction: column;
     }
   }
 `;

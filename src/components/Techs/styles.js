@@ -19,6 +19,11 @@ export const Container = styled.section`
   p {
     margin-top: 16px;
     color: #8A53FF;
+
+    @media (max-width: 860px) {
+      text-align: center;
+      margin: 16px 24px;
+    }
   }
 
   @media (max-width: 1500px) {
@@ -28,16 +33,29 @@ export const Container = styled.section`
   @media (max-width: 1080px) {
     max-width: 860px;
   }
+
+  @media (max-width: 860px) {
+    padding: 0;
+  }
 `;
 
 export const ListTechs = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  gap: 32px;
   margin-top: 52px;
-  margin-left: 72px;
-  
-  width: 100%;
+
+  @media (max-width: 860px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 720px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 520px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 export const Tech = styled.div`

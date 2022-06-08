@@ -12,4 +12,8 @@ export const Container = styled.footer`
   @media (max-width: 1080px) {
     max-width: 860px;
   }
+
+  @media (max-width: 860px) {
+    text-align: center;
+  }
 `;

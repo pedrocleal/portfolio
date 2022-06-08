@@ -16,8 +16,14 @@ export const Container = styled.section`
   width: 100%;
   max-width: 1280px;
   margin: auto;
-  display: flex;
-  flex-direction: column;
+
+  @media (max-width: 1500px) {
+    max-width: 1080px;
+  }
+
+  @media (max-width: 1080px) {
+    max-width: 860px;
+  }
 `;
 
 export const LandingContainer = styled.div`
@@ -59,7 +65,7 @@ export const LandingContainer = styled.div`
       }
 
       &::before {
-        background: ${({ theme }) => (theme === 'dark' ? '#1b1b1b' : '#fafafa')};
+        background: ${({ theme }) => (theme === 'dark' ? '#161a1d' : '#fafafa')};
         animation: ${animateText} 3s steps(24) 1s forwards;
       }
     }
@@ -107,21 +113,55 @@ export const LandingContainer = styled.div`
       }
     }
   }
+
+  @media (max-width: 860px) {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+
+    .left-content {
+      margin-top: 32px;
+      align-items: center;
+
+      .animated-text {
+        text-align: center;
+      }
+    }
+  }
+
+  @media (max-width: 520px) {
+    .left-content {
+      
+      h4 {
+        font-size: 18px;
+      }
+    
+    }
+  }
 `;
 
 export const ProfilePictute = styled.div`
-  display: flex;
-
   img {
     width: 350px;
     height: 350px;
     transition: all 0.3s ease-out 0s;
     box-shadow: 0px 0px 2.5rem ${({ theme }) => (theme === 'dark' ? '#5200FF61' : '#00000029')};
     border-radius: 80%;
+    border: none;
 
     &:hover {
       transform: translate3d(0px, -0.125rem, 0px);
       filter: grayscale(30%) contrast(1) brightness(90%);
+    }
+    
+    @media (max-width: 860px) {
+      height: 300px;
+      width: 300px;
+    }
+
+    @media (max-width: 520px) {
+      height: 200px;
+      width: 200px;
     }
   }
 `;

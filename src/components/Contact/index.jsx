@@ -7,7 +7,7 @@ import memoji from '../../assets/memoji.png';
 export function Contact({ elementRef }) {
   return (
     <Container ref={elementRef}>
-      <div className="texts">
+      <div className="head">
         <h3>Tem alguma dúvida?</h3>
         <h1>Entre em contato!</h1>
       </div>

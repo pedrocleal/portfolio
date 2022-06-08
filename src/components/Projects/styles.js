@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.section`
   width: 100%;
   max-width: 1280px;
-  margin: 52px auto;
+  margin: 72px auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,6 +42,11 @@ export const Container = styled.section`
   @media (max-width: 1080px) {
     max-width: 860px;
   }
+
+  @media (max-width: 860px) {
+    margin-top: 72px;
+    margin-bottom: 0;
+  }
 `;
 
 export const ListProjects = styled.div`
@@ -58,6 +63,10 @@ export const ListProjects = styled.div`
 
     &:nth-child(even) {
       flex-direction: row-reverse;
+
+      @media (max-width: 860px) {
+        flex-direction: column;
+      }
     }
 
     &:nth-child(even) .project-info {
@@ -69,7 +78,7 @@ export const ListProjects = styled.div`
       height: 120px;
       margin-bottom: 16px;
       border-radius: 5px;
-      box-shadow:  1px 1px 32px 1px ${({ theme }) => (theme === 'dark' ? '#8A53FF61' : '#00000029')};
+      box-shadow:  2px 2px 32px 2px ${({ theme }) => (theme === 'dark' ? '#8A53FF61' : '#00000029')};
       transition: all 0.3s ease-out;
 
       &:hover {
@@ -94,6 +103,21 @@ export const ListProjects = styled.div`
         font-weight: bold;
         color: #8A53FF;
       }
+
+      @media (max-width: 860px) {
+        padding: 0 16px;
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 860px) {
+      justify-content: center;
+      flex-direction: column;
     }
   }
 `;
