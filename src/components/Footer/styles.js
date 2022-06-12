@@ -17,10 +17,14 @@ export const Container = styled.footer`
     border-radius: 10px;
     border: 2px solid #5200ff;
     background: transparent;
-    transition: all 0.3s ease-in;
+    transition: all 0.3s ease-out;
 
     &:hover {
-      transform: scale(1.05);
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 860px) {
+      margin-bottom: 24px;
     }
   }
 
@@ -33,6 +37,6 @@ export const Container = styled.footer`
   }
 
   @media (max-width: 860px) {
-    text-align: center;
+    flex-direction: column-reverse;
   }
 `;
