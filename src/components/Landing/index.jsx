@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { MouseSimple } from 'phosphor-react';
 import { Container, LandingContainer, ProfilePictute } from './styles';
 import { ThemeContext } from '../../App';
 
@@ -28,6 +29,8 @@ export function Landing({ elementRef }) {
           <img src={profilePicture} alt="Foto de Pedro Leal sorrindo" />
         </ProfilePictute>
       </LandingContainer>
+      <MouseSimple theme={theme} size={32} weight="regular" className="mouse" />
+
     </Container>
   );
 }

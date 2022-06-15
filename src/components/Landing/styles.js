@@ -16,6 +16,18 @@ export const Container = styled.section`
   width: 100%;
   max-width: 1280px;
   margin: auto;
+  position: relative;
+
+  .mouse {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    color: ${({ theme }) => (theme === 'dark' ? '#fff' : '#000')};
+
+    @media (max-width: 860px) {
+      left: 46%;
+    }
+  }
 
   @media (max-width: 1500px) {
     max-width: 1080px;
