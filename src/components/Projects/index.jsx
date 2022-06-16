@@ -6,22 +6,24 @@ import vassourasDoLarScreenshot from '../../assets/screenshots/vassouras-do-lar.
 import topSuplementosScreenshot from '../../assets/screenshots/top-suplementos.png';
 import { ThemeContext } from '../../App';
 
+import { i18n } from '../../translate/i18n';
+
 const projects = [
   {
     title: 'Dental Líder',
-    desc: 'Site desenvolvido para uma clínica odontológica de Campina Grande - PB.',
+    desc: i18n.t('components.projects.items.first.description'),
     screenshot: dentalLiderScreenshot,
     url: 'https://dentallider.com.br',
   },
   {
     title: 'Vassouras do Lar',
-    desc: 'Site desenvolvido para uma fábrica de vassouras de Santa Rita - PB',
+    desc: i18n.t('components.projects.items.second.description'),
     screenshot: vassourasDoLarScreenshot,
     url: 'https://vassourasdolar.com.br',
   },
   {
     title: 'Top Suplementos',
-    desc: 'Site desenvolvido para uma clínica odontológica de Campina Grande - PB.',
+    desc: i18n.t('components.projects.items.third.description'),
     screenshot: topSuplementosScreenshot,
     url: 'https://top-suplementos.netlify.app',
   },
@@ -32,7 +34,7 @@ export function Projects({ elementRef }) {
 
   return (
     <Container theme={theme} ref={elementRef}>
-      <h1>Projetos</h1>
+      <h1>{i18n.t('components.projects.bigText')}</h1>
       <ListProjects theme={theme}>
         {projects.map(({
           title, desc, screenshot, url,
@@ -42,12 +44,12 @@ export function Projects({ elementRef }) {
             <div className="project-info">
               <span>{title}</span>
               <p>{desc}</p>
-              <a href={url} target="_blank" rel="noreferrer">Clique aqui para conferir o projeto!</a>
+              <a href={url} target="_blank" rel="noreferrer">{i18n.t('components.projects.callToActionLink')}</a>
             </div>
           </div>
         ))}
       </ListProjects>
-      <button type="button">Ver mais no GitHub</button>
+      <button type="button">{i18n.t('components.projects.callToActionButton')}</button>
     </Container>
   );
 }

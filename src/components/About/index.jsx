@@ -2,6 +2,8 @@ import { useContext } from 'react';
 import { Container } from './styles';
 import { ThemeContext } from '../../App';
 
+import { i18n } from '../../translate/i18n';
+
 import illustration from '../../assets/illustration.svg';
 
 export function About({ elementRef }) {
@@ -10,7 +12,7 @@ export function About({ elementRef }) {
   return (
     <Container theme={theme} ref={elementRef}>
       <div className="about-texts">
-        <h1>Sobre mim</h1>
+        <h1>{i18n.t('components.about.bigText')}</h1>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.

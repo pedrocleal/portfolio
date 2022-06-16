@@ -1,11 +1,13 @@
 import {
-  Moon, Sun, List, X,
+  Moon, Sun, List, X, GlobeHemisphereWest,
 } from 'phosphor-react';
 
 import { useContext, useState } from 'react';
 import {
   Container, HeaderContainer, Nav, NavMobile,
 } from './styles';
+
+import { i18n } from '../../translate/i18n';
 
 import { ThemeContext } from '../../App';
 
@@ -25,24 +27,82 @@ export function Header({ refs }) {
     setIsNavMobileOpen((prevState) => !prevState);
   }
 
+  function handleLanguageClick(selectedLanguage) {
+    localStorage.setItem('i18nextLng', selectedLanguage);
+    return window.location.reload();
+  }
+
   return (
     <>
       <Container theme={theme}>
         <HeaderContainer theme={theme}>
           <div className="logo-container">
-            <img src={memoji} alt="Memoji Pedro" />
-            <button type="button" onClick={onToggleTheme}>
-              {theme === 'dark' ? <Sun size={24} color="#FFD600" weight="bold" /> : <Moon size={24} color="#002DA0" weight="bold" />}
+            <img
+              src={memoji}
+              alt="Memoji Pedro"
+            />
+            <button
+              type="button"
+              onClick={onToggleTheme}
+            >
+              {theme === 'dark' ? (
+                <Sun
+                  size={24}
+                  color="#FFD600"
+                  weight="bold"
+                />
+              ) : <Moon size={24} color="#002DA0" weight="bold" />}
             </button>
+            <div type="button" className="translate-button">
+              <GlobeHemisphereWest
+                size={24}
+                color={theme === 'dark' ? '#fff' : '#000'}
+              />
+              <div
+                className="select-tooltip"
+              >
+                <button className="option" type="button" onClick={() => handleLanguageClick('pt-BR')}>pt-BR</button>
+                <hr />
+                <button className="option" type="button" onClick={() => handleLanguageClick('en-US')}>en-US</button>
+              </div>
+            </div>
           </div>
           <Nav theme={theme}>
-            <p aria-hidden="true" onClick={() => handleScrollTo(refs.aboutRef)}>Sobre</p>
-            <p aria-hidden="true" onClick={() => handleScrollTo(refs.projectsRef)}>Projetos</p>
-            <p aria-hidden="true" onClick={() => handleScrollTo(refs.techsRef)}>Conhecimentos</p>
-            <p aria-hidden="true" onClick={() => handleScrollTo(refs.contactsRef)}>Contato</p>
+            <p
+              aria-hidden="true"
+              onClick={() => handleScrollTo(refs.aboutRef)}
+            >
+              {i18n.t('components.header.firstItem')}
+
+            </p>
+            <p
+              aria-hidden="true"
+              onClick={() => handleScrollTo(refs.projectsRef)}
+            >
+              {i18n.t('components.header.secondItem')}
+
+            </p>
+            <p
+              aria-hidden="true"
+              onClick={() => handleScrollTo(refs.techsRef)}
+            >
+              {i18n.t('components.header.thirdItem')}
+
+            </p>
+            <p
+              aria-hidden="true"
+              onClick={() => handleScrollTo(refs.contactsRef)}
+            >
+              {i18n.t('components.header.fourthItem')}
+
+            </p>
           </Nav>
 
-          <button type="button" className="burguer-menu" onClick={toggleNavMobile}>
+          <button
+            type="button"
+            className="burguer-menu"
+            onClick={toggleNavMobile}
+          >
             <List size={32} weight="bold" />
           </button>
 
@@ -50,13 +110,46 @@ export function Header({ refs }) {
       </Container>
       {isNavMobileOpen && (
       <NavMobile>
-        <p aria-hidden="true" onClick={() => handleScrollTo(refs.aboutRef)}>Sobre</p>
-        <p aria-hidden="true" onClick={() => handleScrollTo(refs.projectsRef)}>Projetos</p>
-        <p aria-hidden="true" onClick={() => handleScrollTo(refs.techsRef)}>Conhecimentos</p>
-        <p aria-hidden="true" onClick={() => handleScrollTo(refs.contactsRef)}>Contato</p>
-        <button type="button" className="exit-button" onClick={toggleNavMobile}>
-          <X size={32} weight="bold" color={theme === 'dark' ? '#fff' : '#000'} />
+        <p
+          aria-hidden="true"
+          onClick={() => handleScrollTo(refs.aboutRef)}
+        >
+          {i18n.t('components.header.firstItem')}
+
+        </p>
+        <p
+          aria-hidden="true"
+          onClick={() => handleScrollTo(refs.projectsRef)}
+        >
+          {i18n.t('components.header.secondItem')}
+
+        </p>
+        <p
+          aria-hidden="true"
+          onClick={() => handleScrollTo(refs.techsRef)}
+        >
+          {i18n.t('components.header.thirdItem')}
+
+        </p>
+        <p
+          aria-hidden="true"
+          onClick={() => handleScrollTo(refs.contactsRef)}
+        >
+          {i18n.t('components.header.fourthItem')}
+
+        </p>
+        <button
+          type="button"
+          className="exit-button"
+          onClick={toggleNavMobile}
+        >
+          <X
+            size={32}
+            weight="bold"
+            color={theme === 'dark' ? '#fff' : '#000'}
+          />
         </button>
+
       </NavMobile>
       )}
     </>

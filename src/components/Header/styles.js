@@ -1,4 +1,14 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const animateTooltip = keyframes`
+  from {
+    transform: scale3d(.2,.2, 1);
+  }
+
+  to {
+    transform: scale3d(1,1,1);
+  }
+`;
 
 export const Container = styled.header`
   z-index: 10;
@@ -46,8 +56,47 @@ export const HeaderContainer = styled.header`
       height: 72px;
     }
 
+    .translate-button {
+      margin-top: 8px;
+      position: relative;
+      transition: all 0.3s ease-in;
+      cursor: default;
+      
+      &:hover {
+        .select-tooltip {
+          display: flex;
+        }
+      }
+
+      .select-tooltip {
+        flex-direction: column;
+        width: max-content;
+        position: absolute;
+        display: none;
+        left: 10px;
+        top: 25px;
+        padding: 4px 12px;
+        border-radius: 5px;
+        background: transparent;
+        color: #fff;
+        border: ${({ theme }) => (theme === 'dark' ? '1px solid #fff' : '1px solid #000')};
+        animation: ${animateTooltip} 100ms linear;
+        transition: all ease-in-out;
+
+        hr {
+          width: 100%;
+        }
+
+        .option {
+          margin: 8px 0;
+          color: ${({ theme }) => (theme === 'dark' ? '#fff' : '#000')}
+        }
+      }
+    }
+
     button {
       margin-top: 8px;
+      margin-right: 8px;
       background: transparent;
       
       border: none;

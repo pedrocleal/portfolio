@@ -2,14 +2,16 @@ import { WhatsappLogo, LinkedinLogo, EnvelopeSimple } from 'phosphor-react';
 
 import { Container } from './styles';
 
+import { i18n } from '../../translate/i18n';
+
 import memoji from '../../assets/memoji.png';
 
 export function Contact({ elementRef }) {
   return (
     <Container ref={elementRef}>
       <div className="head">
-        <h3>Tem alguma dúvida?</h3>
-        <h1>Entre em contato!</h1>
+        <h3>{i18n.t('components.contact.firstText')}</h3>
+        <h1>{i18n.t('components.contact.secondText')}</h1>
       </div>
       <img src={memoji} alt="Memoji Pedro Leal" />
       <div className="buttons">

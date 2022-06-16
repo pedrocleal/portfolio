@@ -1,4 +1,5 @@
 import { Container, ListTechs, Tech } from './styles';
+import { i18n } from '../../translate/i18n';
 
 const techs = [
   {
@@ -38,8 +39,8 @@ const techs = [
 export function Techs({ elementRef }) {
   return (
     <Container ref={elementRef}>
-      <h1>Conhecimentos</h1>
-      <p>Tecnologias que estou diariamente em contato, seja no trabalho ou estudando.</p>
+      <h1>{i18n.t('components.techs.bigText')}</h1>
+      <p>{i18n.t('components.techs.smallText')}</p>
       <ListTechs>
         {techs.map(({ name, iconSrc }, index) => (
           <Tech key={index}>

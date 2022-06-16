@@ -3,6 +3,8 @@ import { MouseSimple } from 'phosphor-react';
 import { Container, LandingContainer, ProfilePictute } from './styles';
 import { ThemeContext } from '../../App';
 
+import { i18n } from '../../translate/i18n';
+
 import profilePicture from '../../assets/profile-picture.png';
 
 export function Landing({ elementRef }) {
@@ -12,14 +14,9 @@ export function Landing({ elementRef }) {
     <Container theme={theme} ref={elementRef}>
       <LandingContainer theme={theme}>
         <div className="left-content">
-          <h4>
-            Olá
-            {' '}
-            <div className="emote">👋🏾</div>
-            , eu sou
-          </h4>
+          <h4>{i18n.t('components.landing.smallText')}</h4>
           <h1>Pedro Leal</h1>
-          <h4 className="animated-text">Desenvolvedor front-end.</h4>
+          <h4 className="animated-text">{i18n.t('components.landing.role')}</h4>
           <div className="buttons">
             <a href="https://www.linkedin.com/in/pedrocleal/" target="_blank" rel="noreferrer">LinkedIn</a>
             <a href="https://www.github.com/pedrocleal" target="_blank" rel="noreferrer">Github</a>
