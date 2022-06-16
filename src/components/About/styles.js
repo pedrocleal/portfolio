@@ -18,6 +18,12 @@ export const Container = styled.section`
     p {
       margin-top: 24px;
       width: 80%;
+      text-align: justify;
+    }
+
+    .welcome {
+      font-weight: bold;
+      color: #8A53FF;
     }
   }
   

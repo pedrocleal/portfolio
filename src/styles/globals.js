@@ -26,7 +26,12 @@ export default createGlobalStyle`
   h2,
   h3,
   h4,
-  p, span, strong {
+  p, a, span, strong {
     color: ${({ theme }) => (theme === 'dark' ? '#fff' : '#000')};
+  
+    &::selection {
+      color: #fff;
+      background: #8a53ff;
+    }
   }
 `;

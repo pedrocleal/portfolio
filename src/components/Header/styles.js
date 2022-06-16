@@ -77,19 +77,24 @@ export const HeaderContainer = styled.header`
         top: 25px;
         padding: 4px 12px;
         border-radius: 5px;
-        background: transparent;
+        background: ${({ theme }) => (theme === 'dark' ? '#000' : '#fafafa')};
         color: #fff;
         border: ${({ theme }) => (theme === 'dark' ? '1px solid #fff' : '1px solid #000')};
         animation: ${animateTooltip} 100ms linear;
-        transition: all ease-in-out;
+        transition: all 0.3s ease-in-out;
 
         hr {
           width: 100%;
         }
 
         .option {
+          font-weight: bold;
           margin: 8px 0;
-          color: ${({ theme }) => (theme === 'dark' ? '#fff' : '#000')}
+          color: ${({ theme }) => (theme === 'dark' ? '#fff' : '#000')};
+
+          &:hover {
+            color: #8A53FF;
+          }
         }
       }
     }
@@ -128,7 +133,7 @@ export const Nav = styled.nav`
     margin-right: 32px;
     text-decoration: none;
     color: ${({ theme }) => (theme === 'dark' ? '#fff' : '#000')};
-    font-weight: 500;
+    font-weight: 600;
     transition: all 0.3s ease-in;
 
     &:hover {
