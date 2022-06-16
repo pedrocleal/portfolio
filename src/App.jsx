@@ -1,4 +1,6 @@
-import { createContext, useMemo, useState } from 'react';
+import {
+  useEffect, createContext, useMemo, useState,
+} from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { Home } from './pages/Home';
 import GlobalStyles from './styles/globals';
@@ -6,7 +8,11 @@ import GlobalStyles from './styles/globals';
 export const ThemeContext = createContext('dark');
 
 function App() {
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
+
+  useEffect(() => {
+    localStorage.setItem('theme', theme);
+  }, [theme]);
 
   function handleToggleTheme() {
     setTheme((prevState) => (prevState === 'dark' ? 'light' : 'dark'));
