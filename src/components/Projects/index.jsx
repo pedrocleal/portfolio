@@ -49,7 +49,7 @@ export function Projects({ elementRef }) {
           </div>
         ))}
       </ListProjects>
-      <button type="button">{i18n.t('components.projects.callToActionButton')}</button>
+      <a href="https://github.com/pedrocleal" target="_blank" rel="noreferrer">{i18n.t('components.projects.callToActionButton')}</a>
     </Container>
   );
 }

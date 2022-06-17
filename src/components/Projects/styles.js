@@ -15,7 +15,8 @@ export const Container = styled.section`
     margin-bottom: 52px;
   }
 
-  button {
+  a {
+    text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
