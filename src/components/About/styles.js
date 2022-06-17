@@ -22,8 +22,16 @@ export const Container = styled.section`
     }
 
     .welcome {
+      font-size: 18px;
       font-weight: bold;
-      color: #8A53FF;
+      background: linear-gradient(318deg, #813b87, #5200FF);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      @media (max-width: 860px) {
+        text-align: center;
+      }
     }
   }
   

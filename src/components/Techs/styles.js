@@ -18,7 +18,8 @@ export const Container = styled.section`
   
   p {
     margin-top: 16px;
-    color: #8A53FF;
+    font-size: 18px;
+    color: #A3A3A3;
 
     @media (max-width: 860px) {
       text-align: center;
@@ -70,21 +71,26 @@ export const Tech = styled.div`
     font-size: 18px;
   }
 
+  
   .tech-square {
     padding: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #8A53FF;
-    border-radius: 10px;
     transition: all 0.3s ease-in-out;
-
+    
     &:hover {
       transform: scale(1.08);
     }
-
+    
     img {
       height: 50px;
     }
+  }
+  
+  .tech-square-NextJS {
+    background: #fafafa;
+    border-radius: 100%;
+    padding: 2px;
   }
 `;

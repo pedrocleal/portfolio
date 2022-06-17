@@ -170,8 +170,8 @@ export const NavMobile = styled.div`
     font-size: 18px;
     margin: 24px 0;
     cursor: pointer;
-    background: #8A53FF;
-    border-radius: 20px;
+    background: linear-gradient(318deg, #813b87, #5200FF);
+    border-radius: 15px;
     padding: 8px 16px;;
   }
 

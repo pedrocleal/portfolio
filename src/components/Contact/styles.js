@@ -1,14 +1,25 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-  width: 100vw;
+  width: 100%;
+  max-width: 1280px;
+  border-radius: 32px;
   margin: 72px auto;
   padding-bottom: 120px;
   margin-bottom: 0;
-  background: #5200FF;
+  background: linear-gradient(318deg, #813b87, #5200FF);
   display: flex;
   align-items: center;
   flex-direction: column;
+
+  @media (max-width: 1500px) {
+    max-width: 1080px;
+  }
+
+  @media (max-width: 1080px) {
+    max-width: 860px;
+  }
+
 
   .head {
     margin-top: 92px;
@@ -20,7 +31,7 @@ export const Container = styled.section`
     }
 
     h1 {
-      font-size: 32px;
+      font-size: 36px;
       color: #fff;
     }
   }
@@ -72,7 +83,7 @@ export const Container = styled.section`
         color: #fff;
       }
     }
-
+    
     @media (max-width: 860px) {
       flex-direction: column;
     }

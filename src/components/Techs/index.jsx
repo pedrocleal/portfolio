@@ -1,5 +1,8 @@
+import { useContext } from 'react';
 import { Container, ListTechs, Tech } from './styles';
 import { i18n } from '../../translate/i18n';
+
+import { ThemeContext } from '../../App';
 
 const techs = [
   {
@@ -16,7 +19,7 @@ const techs = [
   },
   {
     name: 'NextJS',
-    iconSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg',
+    iconSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
   },
   {
     name: 'Git',
@@ -37,14 +40,16 @@ const techs = [
 ];
 
 export function Techs({ elementRef }) {
+  const { theme } = useContext(ThemeContext);
+
   return (
-    <Container ref={elementRef}>
+    <Container ref={elementRef} theme={theme}>
       <h1>{i18n.t('components.techs.bigText')}</h1>
       <p>{i18n.t('components.techs.smallText')}</p>
       <ListTechs>
         {techs.map(({ name, iconSrc }, index) => (
           <Tech key={index}>
-            <div className="tech-square">
+            <div className={`tech-square tech-square-${name}`}>
               <img src={iconSrc} alt={`Icone ${name}`} />
             </div>
             <span>{name}</span>

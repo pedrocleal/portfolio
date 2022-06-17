@@ -24,7 +24,7 @@ export const Container = styled.section`
     font-size: 16px;
 
     color: #fff;
-    background: #8A53FF;
+    background: linear-gradient(318deg, #813b87, #5200FF);
     border: none;
     border-radius: 5px;
     outline: none;
@@ -32,7 +32,6 @@ export const Container = styled.section`
 
     &:hover {
       transform: scale(1.1);
-      background: #6124EF;
     }
   }
 
@@ -58,43 +57,34 @@ export const ListProjects = styled.div`
 
   .project {
     margin: 32px 0;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    justify-content: space-between;
-
-    &:nth-child(even) {
-      flex-direction: row-reverse;
-
-      @media (max-width: 860px) {
-        flex-direction: column;
-      }
-    }
-
-    &:nth-child(even) .project-info {
-      margin: 0;
-    }
     
     img {
       width: 250px;
       height: 120px;
+      margin: auto;
       margin-bottom: 16px;
       border-radius: 5px;
-      box-shadow:  2px 2px 32px 2px ${({ theme }) => (theme === 'dark' ? '#8A53FF61' : '#00000029')};
+      box-shadow:  2px 2px 32px 2px ${({ theme }) => (theme === 'dark' ? 'none' : '#00000029')};
       transition: all 0.3s ease-out;
 
       &:hover {
-        box-shadow:  1px 1px 32px 1px ${({ theme }) => (theme === 'dark' ? '#8A53FF' : '#0000006b')};
+        box-shadow:  1px 1px 32px 1px #8A53FF;
         transform: translate3d(0px, -0.125rem, 0px);
       }
     }
 
     .project-info {
-      margin-left: 72px;
-
       span {
         font-size: 22px;
         font-weight: bold;
         margin-bottom: 8px;
+      }
+
+      p {
+        margin-top: 4px;
       }
 
       a {
@@ -102,7 +92,10 @@ export const ListProjects = styled.div`
         margin-top: 12px;
         text-decoration: none;
         font-weight: bold;
-        color: #8A53FF;
+        background: linear-gradient(318deg, #813b87, #5200FF);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
 
       @media (max-width: 860px) {
@@ -117,6 +110,7 @@ export const ListProjects = styled.div`
     }
 
     @media (max-width: 860px) {
+      display: flex;
       justify-content: center;
       flex-direction: column;
     }

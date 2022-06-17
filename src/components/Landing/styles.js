@@ -12,6 +12,22 @@ const blink = keyframes`
   }
 `;
 
+const animateMouse = keyframes`
+  0% {
+    opacity: 0%;
+    transform: translateY(-20px);
+  }
+
+  50% {
+    opacity: 50%;
+  }
+
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+`;
+
 export const Container = styled.section`
   width: 100%;
   max-width: 1280px;
@@ -20,9 +36,12 @@ export const Container = styled.section`
 
   .mouse {
     position: absolute;
-    bottom: 32px;
+    bottom: 30px;
     left: 50%;
     color: ${({ theme }) => (theme === 'dark' ? '#fff' : '#000')};
+    animation: ${animateMouse} 1.3s infinite ease-in-out;
+    animation-delay: 3s;
+
 
     @media (max-width: 860px) {
       left: 46%;
@@ -72,7 +91,7 @@ export const LandingContainer = styled.div`
 
       &::after {
         width: 6px;
-        background: #8A53FF;
+        background: linear-gradient(318deg, #813b87, #5200FF);
         animation: ${animateText} 3s steps(24) 1s forwards, ${blink} 0.75s steps(24) infinite;
       }
 
@@ -111,12 +130,11 @@ export const LandingContainer = styled.div`
         border-radius: 5px;
         font-size: 16px;
         font-weight: 500;
-        background: #8A53FF;
+        background: linear-gradient(318deg, #813b87, #5200FF);
         transition: all 0.3s ease-out;
 
         &:hover {
           transform: scale(1.1);
-          background: #6124EF;
         }
         
         &:nth-child(2) {
@@ -158,8 +176,7 @@ export const ProfilePictute = styled.div`
     height: 350px;
     transition: all 0.3s ease-out 0s;
     box-shadow: 0px 0px 2.5rem ${({ theme }) => (theme === 'dark' ? '#5200FF61' : '#00000029')};
-    border-radius: 80%;
-    border: none;
+    border-radius: 100%;
 
     &:hover {
       transform: translate3d(0px, -0.125rem, 0px);
