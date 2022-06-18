@@ -88,7 +88,8 @@ export const ListProjects = styled.div`
         margin-top: 4px;
       }
 
-      a {
+      .project-link {
+        padding: 0;
         display: inline-block;
         margin-top: 12px;
         text-decoration: none;
@@ -97,6 +98,10 @@ export const ListProjects = styled.div`
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+
+        &:hover {
+          transform: none;
+        }
       }
 
       @media (max-width: 860px) {

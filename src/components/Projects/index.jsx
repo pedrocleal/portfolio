@@ -44,7 +44,7 @@ export function Projects({ elementRef }) {
             <div className="project-info">
               <span>{title}</span>
               <p>{desc}</p>
-              <a href={url} target="_blank" rel="noreferrer">{i18n.t('components.projects.callToActionLink')}</a>
+              <a href={url} className="project-link" target="_blank" rel="noreferrer">{i18n.t('components.projects.callToActionLink')}</a>
             </div>
           </div>
         ))}
