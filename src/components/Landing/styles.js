@@ -28,6 +28,18 @@ const animateMouse = keyframes`
   }
 `;
 
+const float = keyframes`
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px)
+  }
+  100% {
+    transform: translateY(-0px);
+  }
+`;
+
 export const Container = styled.section`
   width: 100%;
   max-width: 1280px;
@@ -161,11 +173,9 @@ export const LandingContainer = styled.div`
 
   @media (max-width: 520px) {
     .left-content {
-      
       h4 {
         font-size: 18px;
       }
-    
     }
   }
 `;
@@ -177,13 +187,9 @@ export const ProfilePictute = styled.div`
     transition: all 0.3s ease-out 0s;
     box-shadow: 0px 0px 2.5rem ${({ theme }) => (theme === 'dark' ? '#5200FF61' : '#00000029')};
     border-radius: 100%;
+    animation: ${float} 5s infinite;
 
-    &:hover {
-      transform: translate3d(0px, -0.125rem, 0px);
-      filter: grayscale(30%) contrast(1) brightness(90%);
-    }
-    
-    @media (max-width: 860px) {
+    @media (max-width: 1500px) {
       height: 300px;
       width: 300px;
     }

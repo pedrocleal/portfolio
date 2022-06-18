@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { motion } from 'framer-motion';
 import { Container, ListTechs, Tech } from './styles';
 import { i18n } from '../../translate/i18n';
 
@@ -49,9 +50,11 @@ export function Techs({ elementRef }) {
       <ListTechs>
         {techs.map(({ name, iconSrc }, index) => (
           <Tech key={index}>
-            <div className={`tech-square tech-square-${name}`}>
-              <img src={iconSrc} alt={`Icone ${name}`} />
-            </div>
+            <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+              <div className={`tech-square tech-square-${name}`}>
+                <img src={iconSrc} alt={`Icone ${name}`} />
+              </div>
+            </motion.button>
             <span>{name}</span>
           </Tech>
         ))}

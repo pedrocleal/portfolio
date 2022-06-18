@@ -1,4 +1,6 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import { Container, ListProjects } from './styles';
 
 import dentalLiderScreenshot from '../../assets/screenshots/dental-lider.png';
@@ -29,24 +31,61 @@ const projects = [
   },
 ];
 
+const projectsMotionVarians = {
+  visible: {
+    opacity: 1, scale: 1, transition: { duration: 0.5 },
+  },
+  hidden: { opacity: 0, scale: 0 },
+};
+
+const listingProjectsVariants = {
+  visible: {
+    opacity: 1, translateX: 0, transition: { duration: 1 },
+  },
+  hidden: { opacity: 0, translateX: -200 },
+};
+
 export function Projects({ elementRef }) {
   const { theme } = useContext(ThemeContext);
 
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    }
+  }, [controls, inView]);
+
   return (
     <Container theme={theme} ref={elementRef}>
-      <h1>{i18n.t('components.projects.bigText')}</h1>
+      <motion.div
+        ref={ref}
+        animate={controls}
+        variants={projectsMotionVarians}
+        initial="hidden"
+      >
+        <h1>{i18n.t('components.projects.bigText')}</h1>
+      </motion.div>
       <ListProjects theme={theme}>
         {projects.map(({
           title, desc, screenshot, url,
         }, index) => (
-          <div className="project" key={index}>
-            <img src={screenshot} alt={`Print da tela do projeto ${title}`} />
-            <div className="project-info">
-              <span>{title}</span>
-              <p>{desc}</p>
-              <a href={url} className="project-link" target="_blank" rel="noreferrer">{i18n.t('components.projects.callToActionLink')}</a>
+          <motion.div
+            ref={ref}
+            animate={controls}
+            variants={listingProjectsVariants}
+            initial="hidden"
+          >
+            <div className="project" key={index}>
+              <img src={screenshot} alt={`Print da tela do projeto ${title}`} />
+              <div className="project-info">
+                <span>{title}</span>
+                <p>{desc}</p>
+                <a href={url} className="project-link" target="_blank" rel="noreferrer">{i18n.t('components.projects.callToActionLink')}</a>
+              </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </ListProjects>
       <a href="https://github.com/pedrocleal" target="_blank" rel="noreferrer">{i18n.t('components.projects.callToActionButton')}</a>

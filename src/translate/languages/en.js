@@ -16,7 +16,7 @@ const messages = {
           bigText: 'About me',
           firstParagraph: 'Welcome to my portfolio!',
           secondParagraph: "My name is Pedro Leal, i'm 22 years old and i've been focusing on studies in the area of Web Development for approximately 1 year. As a developer, i always seek to apply best practices to deliver performance applications with a good end-user experience.",
-          thirdParagraph: 'I started in the programming world in 2018 when I joined the Computational Mathematics course at UFPB, during the course I learned about the basic concepts of the area such as: logic and algorithms, conditions, loops, data structures and etc. I also had contact with the C and Python programming languages.',
+          thirdParagraph: 'I started in the programming world in 2019 when I joined the Computational Mathematics course at UFPB, during the course I learned about the basic concepts of the area such as: logic and algorithms, conditions, loops, data structures and etc. I also had contact with the C and Python programming languages.',
           fourthParagraph: 'Currently, my main focus is the JavaScript ecosystem, so I dedicate myself daily to create new projects to put my studies into practice and acquire more knowledge.',
         },
         projects: {

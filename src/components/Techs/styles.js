@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.section`
   width: 100%;
@@ -64,13 +64,20 @@ export const Tech = styled.div`
   align-items: center;
   justify-content: flex-start;
 
+  
   span {
     margin-top: 0;
     margin-left: 24px;
     font-weight: bold;
     font-size: 18px;
   }
-
+  
+  /* Motion button */
+  button {
+    background: transparent;
+    border: none;
+    outline: none;
+  }
   
   .tech-square {
     padding: 8px;
@@ -79,9 +86,7 @@ export const Tech = styled.div`
     justify-content: center;
     transition: all 0.3s ease-in-out;
     
-    &:hover {
-      transform: scale(1.08);
-    }
+    
     
     img {
       height: 50px;
@@ -91,6 +96,7 @@ export const Tech = styled.div`
   .tech-square-NextJS {
     background: #fafafa;
     border-radius: 100%;
-    padding: 2px;
+    margin: 0 8px;
+    padding: 1px;
   }
 `;
