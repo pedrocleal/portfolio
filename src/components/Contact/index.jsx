@@ -28,7 +28,7 @@ export function Contact({ elementRef }) {
   }, [ref, inView]);
 
   return (
-    <motion.div animate={controls} ref={ref} variants={contactMotionVariants} initial="hidden">
+    <motion.div whileInView={{ opacity: 1, scale: 1, transition: { duration: 0.8 } }} initial={{ opacity: 0, scale: 0 }}>
       <Container ref={elementRef}>
         <div className="head">
           <h3>{i18n.t('components.contact.firstText')}</h3>

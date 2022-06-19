@@ -104,12 +104,12 @@ export const LandingContainer = styled.div`
       &::after {
         width: 6px;
         background: linear-gradient(318deg, #813b87, #5200FF);
-        animation: ${animateText} 3s steps(24) 1s forwards, ${blink} 0.75s steps(24) infinite;
+        animation: ${animateText} 3s steps(24) 2s forwards, ${blink} 0.75s steps(24) infinite;
       }
 
       &::before {
         background: ${({ theme }) => (theme === 'dark' ? '#161a1d' : '#fafafa')};
-        animation: ${animateText} 3s steps(24) 1s forwards;
+        animation: ${animateText} 3s steps(24) 2s forwards;
       }
     }
 

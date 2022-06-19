@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { MouseSimple } from 'phosphor-react';
+import { motion } from 'framer-motion';
 import { Container, LandingContainer, ProfilePictute } from './styles';
 import { ThemeContext } from '../../App';
 
@@ -14,17 +15,54 @@ export function Landing({ elementRef }) {
     <Container theme={theme} ref={elementRef}>
       <LandingContainer theme={theme}>
         <div className="left-content">
-          <h4>{i18n.t('components.landing.smallText')}</h4>
-          <h1>Pedro Leal</h1>
-          <h4 className="animated-text">{i18n.t('components.landing.role')}</h4>
-          <div className="buttons">
-            <a href="https://www.linkedin.com/in/pedrocleal/" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a href="https://www.github.com/pedrocleal" target="_blank" rel="noreferrer">Github</a>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, translateY: 50 }}
+            animate={{ opacity: 1, translateY: 0 }}
+            transition={{ ease: 'easeIn', duration: 0.5, delay: 0.5 }}
+          >
+            <h4>{i18n.t('components.landing.smallText')}</h4>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ ease: 'easeIn', duration: 1, delay: 1 }}
+          >
+            <h1>Pedro Leal</h1>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, translateY: 50 }}
+            animate={{ opacity: 1, translateY: 0 }}
+            transition={{ ease: 'easeIn', duration: 1, delay: 1.5 }}
+          >
+            <h4 className="animated-text">{i18n.t('components.landing.role')}</h4>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, translateY: 50 }}
+            animate={{ opacity: 1, translateY: 0 }}
+            transition={{ ease: 'easeIn', duration: 2, delay: 1.5 }}
+          >
+            <div className="buttons">
+              <a href="https://www.linkedin.com/in/pedrocleal/" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a href="https://www.github.com/pedrocleal" target="_blank" rel="noreferrer">Github</a>
+            </div>
+          </motion.div>
+
         </div>
-        <ProfilePictute theme={theme}>
-          <img src={profilePicture} alt="Foto de Pedro Leal sorrindo" />
-        </ProfilePictute>
+
+        <motion.div
+          initial={{ opacity: 0, translateY: 100 }}
+          animate={{ opacity: 1, translateY: 0 }}
+          transition={{ ease: 'easeIn', duration: 2 }}
+        >
+          <ProfilePictute theme={theme}>
+            <img src={profilePicture} alt="Foto de Pedro Leal sorrindo" />
+          </ProfilePictute>
+
+        </motion.div>
+
       </LandingContainer>
       <MouseSimple theme={theme} size={32} weight="regular" className="mouse" />
 

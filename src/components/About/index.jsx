@@ -1,6 +1,5 @@
-import { useContext, useEffect } from 'react';
-import { useAnimation, motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import { useContext } from 'react';
+import { motion } from 'framer-motion';
 import { Container } from './styles';
 import { ThemeContext } from '../../App';
 
@@ -8,32 +7,18 @@ import { i18n } from '../../translate/i18n';
 
 import illustration from '../../assets/illustration.svg';
 
-const aboutMotionVariants = {
-  visible: {
-    opacity: 1, translateY: -50, transition: { duration: 0.8 },
-  },
-  hidden: { opacity: 0, translateY: 0 },
-};
-
 export function About({ elementRef }) {
   const { theme } = useContext(ThemeContext);
-
-  const controls = useAnimation();
-  const [ref, inView] = useInView();
-
-  useEffect(() => {
-    if (inView) {
-      controls.start('visible');
-    }
-  }, [controls, inView]);
 
   return (
     <Container theme={theme} ref={elementRef}>
       <motion.div
-        ref={ref}
-        animate={controls}
-        variants={aboutMotionVariants}
-        initial="hidden"
+        // ref={ref}
+        // animate={controls}
+        // variants={aboutMotionVariants}
+        whileInView={{ opacity: 1, translateY: -50, transition: { duration: 0.8 } }}
+        initial={{ opacity: 0, translateY: 0 }}
+        viewport={{ once: true }}
       >
         <div className="about-texts">
           <h1>{i18n.t('components.about.bigText')}</h1>
@@ -42,14 +27,11 @@ export function About({ elementRef }) {
           <p>{i18n.t('components.about.thirdParagraph')}</p>
           <p>{i18n.t('components.about.fourthParagraph')}</p>
         </div>
-
       </motion.div>
 
       <motion.div
-        ref={ref}
-        animate={controls}
-        variants={aboutMotionVariants}
-        initial="hidden"
+        whileInView={{ opacity: 1, translateY: -50, transition: { duration: 0.8 } }}
+        initial={{ opacity: 0, translateY: 0 }}
       >
         <img src={illustration} alt="" />
 

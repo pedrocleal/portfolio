@@ -60,10 +60,12 @@ export function Projects({ elementRef }) {
   return (
     <Container theme={theme} ref={elementRef}>
       <motion.div
-        ref={ref}
-        animate={controls}
-        variants={projectsMotionVarians}
-        initial="hidden"
+        // ref={ref}
+        // animate={controls}
+        // variants={projectsMotionVarians}
+        whileInView={{ opacity: 1, scale: 1, transition: { duration: 0.8 } }}
+        initial={{ opacity: 0, scale: 0.5 }}
+        viewport={{ once: true }}
       >
         <h1>{i18n.t('components.projects.bigText')}</h1>
       </motion.div>
@@ -72,10 +74,9 @@ export function Projects({ elementRef }) {
           title, desc, screenshot, url,
         }, index) => (
           <motion.div
-            ref={ref}
-            animate={controls}
-            variants={listingProjectsVariants}
-            initial="hidden"
+            whileInView={{ opacity: 1, translateX: 50, transition: { duration: 0.8 } }}
+            initial={{ opacity: 0, translateX: 0 }}
+            viewport={{ once: true }}
           >
             <div className="project" key={index}>
               <img src={screenshot} alt={`Print da tela do projeto ${title}`} />
