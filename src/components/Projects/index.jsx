@@ -1,6 +1,5 @@
-import { useContext, useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import { useContext } from 'react';
+import { motion } from 'framer-motion';
 import { Container, ListProjects } from './styles';
 
 import dentalLiderScreenshot from '../../assets/screenshots/dental-lider.png';
@@ -31,38 +30,12 @@ const projects = [
   },
 ];
 
-const projectsMotionVarians = {
-  visible: {
-    opacity: 1, scale: 1, transition: { duration: 0.5 },
-  },
-  hidden: { opacity: 0, scale: 0 },
-};
-
-const listingProjectsVariants = {
-  visible: {
-    opacity: 1, translateX: 0, transition: { duration: 1 },
-  },
-  hidden: { opacity: 0, translateX: -200 },
-};
-
 export function Projects({ elementRef }) {
   const { theme } = useContext(ThemeContext);
-
-  const controls = useAnimation();
-  const [ref, inView] = useInView();
-
-  useEffect(() => {
-    if (inView) {
-      controls.start('visible');
-    }
-  }, [controls, inView]);
 
   return (
     <Container theme={theme} ref={elementRef}>
       <motion.div
-        // ref={ref}
-        // animate={controls}
-        // variants={projectsMotionVarians}
         whileInView={{ opacity: 1, scale: 1, transition: { duration: 0.8 } }}
         initial={{ opacity: 0, scale: 0.5 }}
         viewport={{ once: true }}
@@ -74,8 +47,8 @@ export function Projects({ elementRef }) {
           title, desc, screenshot, url,
         }, index) => (
           <motion.div
-            whileInView={{ opacity: 1, translateX: 50, transition: { duration: 0.8 } }}
-            initial={{ opacity: 0, translateX: 0 }}
+            whileInView={{ opacity: 1, translateX: 0, transition: { duration: 0.8 } }}
+            initial={{ opacity: 0, translateX: -50 }}
             viewport={{ once: true }}
           >
             <div className="project" key={index}>

@@ -1,32 +1,12 @@
 import { WhatsappLogo, LinkedinLogo, EnvelopeSimple } from 'phosphor-react';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { Container } from './styles';
 
 import { i18n } from '../../translate/i18n';
 
 import memoji from '../../assets/memoji.png';
 
-const contactMotionVariants = {
-  visible: {
-    opacity: 1, scale: 1, transition: { duration: 0.8 },
-  },
-  hidden: {
-    opacity: 0, scale: 0,
-  },
-};
-
 export function Contact({ elementRef }) {
-  const [ref, inView] = useInView();
-  const controls = useAnimation();
-
-  useEffect(() => {
-    if (inView) {
-      controls.start('visible');
-    }
-  }, [ref, inView]);
-
   return (
     <motion.div whileInView={{ opacity: 1, scale: 1, transition: { duration: 0.8 } }} initial={{ opacity: 0, scale: 0 }}>
       <Container ref={elementRef}>

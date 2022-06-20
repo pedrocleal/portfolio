@@ -57,6 +57,7 @@ export const ListProjects = styled.div`
   flex-direction: column;
   margin-bottom: 32px;
 
+  
   .project {
     margin: 32px 0;
     display: grid;
@@ -119,6 +120,7 @@ export const ListProjects = styled.div`
     @media (max-width: 860px) {
       display: flex;
       justify-content: center;
+      align-items: center;
       flex-direction: column;
     }
   }

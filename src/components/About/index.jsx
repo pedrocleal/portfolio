@@ -13,9 +13,6 @@ export function About({ elementRef }) {
   return (
     <Container theme={theme} ref={elementRef}>
       <motion.div
-        // ref={ref}
-        // animate={controls}
-        // variants={aboutMotionVariants}
         whileInView={{ opacity: 1, translateY: -50, transition: { duration: 0.8 } }}
         initial={{ opacity: 0, translateY: 0 }}
         viewport={{ once: true }}
