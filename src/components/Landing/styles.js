@@ -130,11 +130,15 @@ export const LandingContainer = styled.div`
 
     .buttons {
       display: flex;
+      margin-top: 24px;
 
-      margin: 24px 12px 0;
+      @media (max-width: 520px) {
+        margin: 24px 12px 0;
+      }
 
       .cv-button {
         p {
+          color: #fff;
           margin-right: 8px;
         }
       }
