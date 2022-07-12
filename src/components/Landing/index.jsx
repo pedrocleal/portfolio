@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { MouseSimple } from 'phosphor-react';
+import { ArrowSquareOut, MouseSimple } from 'phosphor-react';
 import { motion } from 'framer-motion';
 import { Container, LandingContainer, ProfilePictute } from './styles';
 import { ThemeContext } from '../../App';
@@ -47,6 +47,15 @@ export function Landing({ elementRef }) {
             <div className="buttons">
               <a href="https://www.linkedin.com/in/pedrocleal/" target="_blank" rel="noreferrer">LinkedIn</a>
               <a href="https://www.github.com/pedrocleal" target="_blank" rel="noreferrer">Github</a>
+              <a
+                href="https://drive.google.com/file/d/1xWMEiE-OmUNvnT4rO3qpYvfruMn0r9OS/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer"
+                className="cv-button"
+              >
+                <p>CV</p>
+                <ArrowSquareOut />
+              </a>
             </div>
           </motion.div>
 

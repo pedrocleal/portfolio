@@ -129,10 +129,23 @@ export const LandingContainer = styled.div`
     }
 
     .buttons {
-      margin-top: 24px;
+      display: flex;
+
+      margin: 24px 12px 0;
+
+      .cv-button {
+        p {
+          margin-right: 8px;
+        }
+      }
 
       a {
-        display: inline-block;
+        margin-left: 16px;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         text-align: center;
         padding: 8px 16px;
         text-decoration: none;
@@ -149,8 +162,8 @@ export const LandingContainer = styled.div`
           transform: scale(1.1);
         }
         
-        &:nth-child(2) {
-          margin-left: 16px;
+        &:nth-child(1) {
+          margin-left: 0;
         }
       }
     }
