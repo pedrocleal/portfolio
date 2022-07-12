@@ -48,7 +48,7 @@ export function Landing({ elementRef }) {
               <a href="https://www.linkedin.com/in/pedrocleal/" target="_blank" rel="noreferrer">LinkedIn</a>
               <a href="https://www.github.com/pedrocleal" target="_blank" rel="noreferrer">Github</a>
               <a
-                href="https://drive.google.com/file/d/1xWMEiE-OmUNvnT4rO3qpYvfruMn0r9OS/view?usp=sharing"
+                href="https://drive.google.com/file/d/1nXbbhUuRZVvqSo5OT_MXpokSH10eaOdp/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
                 className="cv-button"
