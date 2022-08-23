@@ -1,8 +1,10 @@
+/* eslint-disable react/no-array-index-key */
 import { useContext } from 'react';
 import { motion } from 'framer-motion';
 import { Container, ListProjects } from './styles';
 
 import dentalLiderScreenshot from '../../assets/screenshots/dental-lider.png';
+import kpexpertservicesScreenshot from '../../assets/screenshots/kpexpertservices.png';
 import vassourasDoLarScreenshot from '../../assets/screenshots/vassouras-do-lar.png';
 import topSuplementosScreenshot from '../../assets/screenshots/top-suplementos.png';
 import { ThemeContext } from '../../App';
@@ -12,19 +14,25 @@ import { i18n } from '../../translate/i18n';
 const projects = [
   {
     title: 'Dental Líder',
-    desc: i18n.t('components.projects.items.first.description'),
+    desc: i18n.t('components.projects.items.one.description'),
     screenshot: dentalLiderScreenshot,
     url: 'https://dentallider.com.br',
   },
   {
+    title: 'KP Expert Services',
+    desc: i18n.t('components.projects.items.two.description'),
+    screenshot: kpexpertservicesScreenshot,
+    url: 'https://kpexpertservices.com',
+  },
+  {
     title: 'Vassouras do Lar',
-    desc: i18n.t('components.projects.items.second.description'),
+    desc: i18n.t('components.projects.items.three.description'),
     screenshot: vassourasDoLarScreenshot,
     url: 'https://vassourasdolar.com.br',
   },
   {
     title: 'Top Suplementos',
-    desc: i18n.t('components.projects.items.third.description'),
+    desc: i18n.t('components.projects.items.four.description'),
     screenshot: topSuplementosScreenshot,
     url: 'https://top-suplementos.netlify.app',
   },

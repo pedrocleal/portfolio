@@ -24,14 +24,17 @@ const messages = {
           callToActionButton: 'Ver mais no GitHub',
           callToActionLink: 'Clique aqui para acessar o projeto!',
           items: {
-            first: {
+            one: {
               description: 'Site desenvolvido para uma clínica odontológica de Campina Grande - PB.',
             },
-            second: {
-              description: 'Site desenvolvido para uma fábrica de vassouras de Santa Rita - PB',
+            two: {
+              description: 'Site desenvolvido para uma empresa de serviços especializados em Cape Cod, Massachusetts.',
             },
-            third: {
+            three: {
               description: 'Projeto de um e-commerce desenvolvido para colocar em prática meus estudos.',
+            },
+            four: {
+              description: 'Site desenvolvido para uma fábrica de vassouras de Santa Rita - PB.',
             },
           },
         },

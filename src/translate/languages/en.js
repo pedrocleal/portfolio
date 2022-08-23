@@ -24,14 +24,17 @@ const messages = {
           callToActionButton: 'See more in GitHub',
           callToActionLink: 'Open the project!',
           items: {
-            first: {
+            one: {
               description: 'Website developed for a dental clinic in Campina Grande - PB.',
             },
-            second: {
-              description: 'Website developed for a broom factory in Santa Rita - PB.',
+            two: {
+              description: 'Website developed for a specialist services company in Cape Cod, Massachusetts.',
             },
-            third: {
-              description: 'E-commerce developed in order to put my studies into practice.',
+            three: {
+              description: 'Project of an e-commerce developed to put my studies into practice.',
+            },
+            four: {
+              description: 'Website developed for a broom factory in Santa Rita - PB.',
             },
           },
         },
