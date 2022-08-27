@@ -25,16 +25,17 @@ const projects = [
     url: 'https://kpexpertservices.com',
   },
   {
-    title: 'Vassouras do Lar',
-    desc: i18n.t('components.projects.items.three.description'),
-    screenshot: vassourasDoLarScreenshot,
-    url: 'https://vassourasdolar.com.br',
-  },
-  {
     title: 'Top Suplementos',
-    desc: i18n.t('components.projects.items.four.description'),
+    desc: i18n.t('components.projects.items.three.description'),
     screenshot: topSuplementosScreenshot,
     url: 'https://top-suplementos.netlify.app',
+
+  },
+  {
+    title: 'Vassouras do Lar',
+    desc: i18n.t('components.projects.items.four.description'),
+    screenshot: vassourasDoLarScreenshot,
+    url: 'https://vassourasdolar.com.br',
   },
 ];
 
