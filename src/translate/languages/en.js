@@ -10,7 +10,7 @@ const messages = {
         },
         landing: {
           smallText: "Hi there 👋🏾, I'm",
-          role: 'Front-end developer.',
+          role: 'Web developer.',
         },
         about: {
           bigText: 'About me',
