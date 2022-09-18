@@ -108,7 +108,7 @@ export const LandingContainer = styled.div`
       }
 
       &::before {
-        background: ${({ theme }) => (theme === 'dark' ? '#161a1d' : '#fafafa')};
+        background: ${({ theme }) => (theme === 'dark' ? '#010203' : '#fafafa')};
         animation: ${animateText} 3s steps(24) 2s forwards;
       }
     }

@@ -130,11 +130,11 @@ export const Nav = styled.nav`
 
   p {
     cursor: pointer;
-    margin-right: 32px;
+    margin-right: 42px;
     text-decoration: none;
     color: ${({ theme }) => (theme === 'dark' ? '#fff' : '#000')};
-    font-weight: 600;
-    transition: all 0.3s ease-in;
+    font-weight: 500;
+    transition: all 0.3s ease;
 
     &:hover {
       color: #8A53FF;

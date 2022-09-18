@@ -9,7 +9,7 @@ export default createGlobalStyle`
   }
 
   body {
-    background: ${({ theme }) => (theme === 'dark' ? '#161a1d' : '#fafafa')};
+    background: ${({ theme }) => (theme === 'dark' ? '#010203' : '#fafafa')};
     margin-top: -1px;
     transition: all 0.3s ease-in;
     height: 100%;
