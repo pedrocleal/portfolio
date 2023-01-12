@@ -11,7 +11,8 @@ import { i18n } from '../../translate/i18n';
 
 import { ThemeContext } from '../../App';
 
-import memoji from '../../assets/memoji.png';
+// import memoji from '../../assets/memoji.png';
+import logo from '../../assets/logo.png';
 
 export function Header({ refs }) {
   const { theme, onToggleTheme } = useContext(ThemeContext);
@@ -38,7 +39,7 @@ export function Header({ refs }) {
         <HeaderContainer theme={theme}>
           <div className="logo-container">
             <img
-              src={memoji}
+              src={logo}
               alt="Memoji Pedro"
             />
             <button

@@ -8,6 +8,7 @@ export const Container = styled.section`
   padding-bottom: 120px;
   margin-bottom: 0;
   background: linear-gradient(318deg, #813b87, #5200FF);
+  /* background: #020202; */
   display: flex;
   align-items: center;
   flex-direction: column;
