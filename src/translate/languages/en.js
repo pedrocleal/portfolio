@@ -24,17 +24,26 @@ const messages = {
           callToActionButton: 'See more in GitHub',
           callToActionLink: 'Open the project!',
           items: {
-            one: {
+            dentalLider: {
               description: 'Website developed for a dental clinic in Campina Grande - PB.',
             },
-            two: {
+            kp: {
               description: 'Website developed for a specialist services company in Cape Cod, Massachusetts.',
             },
-            three: {
+            topSuplementos: {
               description: 'Project of an e-commerce developed to put my studies into practice.',
             },
-            four: {
+            vassourasDoLar: {
               description: 'Website developed for a broom factory in Santa Rita - PB.',
+            },
+            hiperdental: {
+              description: 'Website developed for a dental clinic in João Pessoa - PB.',
+            },
+            trads: {
+              description: 'Project developed for a health plan brokerage.',
+            },
+            amil: {
+              description: "Landing page developed for a health plan's company.",
             },
           },
         },

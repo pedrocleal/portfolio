@@ -3,10 +3,14 @@ import { useContext } from 'react';
 import { motion } from 'framer-motion';
 import { Container, ListProjects } from './styles';
 
-import dentalLiderScreenshot from '../../assets/screenshots/dental-lider.png';
+import dentalLiderScreenshot from '../../assets/screenshots/dental-liderr.png';
 import kpexpertservicesScreenshot from '../../assets/screenshots/kpexpertservices.png';
 import vassourasDoLarScreenshot from '../../assets/screenshots/vassouras-do-lar.png';
+import tradsScreenshot from '../../assets/screenshots/trads-corretora.png';
 import topSuplementosScreenshot from '../../assets/screenshots/top-suplementos.png';
+import amilScreenshot from '../../assets/screenshots/amil.png';
+import hiperdentalScreenshot from '../../assets/screenshots/hiperdental.png';
+
 import { ThemeContext } from '../../App';
 
 import { i18n } from '../../translate/i18n';
@@ -14,28 +18,46 @@ import { i18n } from '../../translate/i18n';
 const projects = [
   {
     title: 'Dental Líder',
-    desc: i18n.t('components.projects.items.one.description'),
+    desc: i18n.t('components.projects.items.dentalLider.description'),
     screenshot: dentalLiderScreenshot,
     url: 'https://dentallider.com.br',
   },
   {
+    title: 'Hiperdental Mangabeira',
+    desc: i18n.t('components.projects.items.hiperdental.description'),
+    screenshot: hiperdentalScreenshot,
+    url: 'https://hiperdentalmangabeira.com.br/',
+  },
+  {
     title: 'KP Expert Services',
-    desc: i18n.t('components.projects.items.two.description'),
+    desc: i18n.t('components.projects.items.kp.description'),
     screenshot: kpexpertservicesScreenshot,
     url: 'https://kpexpertservices.com',
   },
   {
     title: 'Top Suplementos',
-    desc: i18n.t('components.projects.items.three.description'),
+    desc: i18n.t('components.projects.items.topSuplementos.description'),
     screenshot: topSuplementosScreenshot,
     url: 'https://top-suplementos.netlify.app',
 
   },
   {
+    title: 'Trads Corretora',
+    desc: i18n.t('components.projects.items.trads.description'),
+    screenshot: tradsScreenshot,
+    url: '',
+  },
+  {
     title: 'Vassouras do Lar',
-    desc: i18n.t('components.projects.items.four.description'),
+    desc: i18n.t('components.projects.items.vassourasDoLar.description'),
     screenshot: vassourasDoLarScreenshot,
     url: 'https://vassourasdolar.com.br',
+  },
+  {
+    title: 'Amil Saúde (Trads Corretora)',
+    desc: i18n.t('components.projects.items.amil.description'),
+    screenshot: amilScreenshot,
+    url: 'https://amillsaude.com.br',
   },
 ];
 
@@ -65,7 +87,9 @@ export function Projects({ elementRef }) {
               <div className="project-info">
                 <span>{title}</span>
                 <p>{desc}</p>
-                <a href={url} className="project-link" target="_blank" rel="noreferrer">{i18n.t('components.projects.callToActionLink')}</a>
+                {url ? (
+                  <a href={url} className="project-link" target="_blank" rel="noreferrer">{i18n.t('components.projects.callToActionLink')}</a>
+                ) : '🔒'}
               </div>
             </div>
           </motion.div>

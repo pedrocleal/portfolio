@@ -24,17 +24,26 @@ const messages = {
           callToActionButton: 'Ver mais no GitHub',
           callToActionLink: 'Clique aqui para acessar o projeto!',
           items: {
-            one: {
+            dentalLider: {
               description: 'Site desenvolvido para uma clínica odontológica de Campina Grande - PB.',
             },
-            two: {
+            kp: {
               description: 'Site desenvolvido para uma empresa de serviços especializados em Cape Cod, Massachusetts.',
             },
-            three: {
+            topSuplementos: {
               description: 'Projeto de um e-commerce desenvolvido para colocar em prática meus estudos.',
             },
-            four: {
+            vassourasDoLar: {
               description: 'Site desenvolvido para uma fábrica de vassouras de Santa Rita - PB.',
+            },
+            hiperdental: {
+              description: 'Site desenvolvido para uma clínica odontológica de João Pessoa - PB.',
+            },
+            trads: {
+              description: 'Projeto desenvolvido para uma corretora de planos de saúde.',
+            },
+            amil: {
+              description: 'Landing page desenvolvida para uma empresa de planos de saúde.',
             },
           },
         },

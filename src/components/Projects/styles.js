@@ -65,16 +65,17 @@ export const ListProjects = styled.div`
     align-items: center;
     
     img {
-      width: 250px;
+      width: 210px;
       height: 120px;
       margin: auto;
       margin-bottom: 16px;
       border-radius: 5px;
-      box-shadow:  2px 2px 32px 2px ${({ theme }) => (theme === 'dark' ? 'none' : '#00000029')};
+      /* box-shadow:  2px 2px 32px 2px ${({ theme }) => (theme === 'dark' ? 'none' : '#00000029')}; */
       transition: all 0.3s ease-out;
+      inset: 0;
 
       &:hover {
-        box-shadow:  1px 1px 32px 1px #8A53FF;
+        /* box-shadow:  1px 1px 32px 1px #8A53FF; */
         transform: translate3d(0px, -0.125rem, 0px);
       }
     }

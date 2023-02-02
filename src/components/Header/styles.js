@@ -92,6 +92,10 @@ export const HeaderContainer = styled.header`
           margin: 8px 0;
           color: ${({ theme }) => (theme === 'dark' ? '#fff' : '#000')};
 
+          img {
+            height: 32px;
+          }
+
           &:hover {
             color: #8A53FF;
           }

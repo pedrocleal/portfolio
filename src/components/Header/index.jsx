@@ -13,6 +13,8 @@ import { ThemeContext } from '../../App';
 
 // import memoji from '../../assets/memoji.png';
 import logo from '../../assets/logo.png';
+import brazilFlag from '../../assets/brazil.png';
+import usaFlag from '../../assets/usa.png';
 
 export function Header({ refs }) {
   const { theme, onToggleTheme } = useContext(ThemeContext);
@@ -62,9 +64,13 @@ export function Header({ refs }) {
               <div
                 className="select-tooltip"
               >
-                <button className="option" type="button" onClick={() => handleLanguageClick('pt-BR')}>pt-BR</button>
+                <button className="option" type="button" onClick={() => handleLanguageClick('pt-BR')}>
+                  <img src={brazilFlag} alt="Brazilian flag" />
+                </button>
                 <hr />
-                <button className="option" type="button" onClick={() => handleLanguageClick('en-US')}>en-US</button>
+                <button className="option" type="button" onClick={() => handleLanguageClick('en-US')}>
+                  <img src={usaFlag} alt="American flag" />
+                </button>
               </div>
             </div>
           </div>
