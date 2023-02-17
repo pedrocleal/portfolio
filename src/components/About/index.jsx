@@ -23,6 +23,7 @@ export function About({ elementRef }) {
           <p>{i18n.t('components.about.secondParagraph')}</p>
           <p>{i18n.t('components.about.thirdParagraph')}</p>
           <p>{i18n.t('components.about.fourthParagraph')}</p>
+          <p>{i18n.t('components.about.fifthParagraph')}</p>
         </div>
       </motion.div>
 
