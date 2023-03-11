@@ -7,6 +7,10 @@ import { ThemeContext } from '../../App';
 
 const techs = [
   {
+    name: 'TypeScript',
+    iconSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
+  },
+  {
     name: 'JavaScript',
     iconSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
   },
@@ -37,6 +41,18 @@ const techs = [
   {
     name: 'CSS',
     iconSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
+  },
+  {
+    name: 'Sass',
+    iconSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg',
+  },
+  {
+    name: 'Figma',
+    iconSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg',
+  },
+  {
+    name: 'Wordpress',
+    iconSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg',
   },
 ];
 
